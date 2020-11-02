@@ -58,9 +58,8 @@ const renderPlaces = (places) => {
 }
 
 const changeAframeBoxColor = () => {
-    const aframeBox = document.getElementById("aframe-box");
-
     setInterval(() => {
+        const aframeBox = document.getElementById("aframe-box");
         const rgb = {
             r: Math.floor(Math.random() * 256),
             g: Math.floor(Math.random() * 256),
