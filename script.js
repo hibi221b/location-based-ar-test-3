@@ -58,16 +58,14 @@ const renderPlaces = (places) => {
 }
 
 const changeAframeBoxColor = () => {
-    setTimeout(() => {
-        setInterval(() => {
-            const aframeBox = document.getElementById("aframe-box");
-            const rgb = {
-                r: Math.floor(Math.random() * 256), 
-                g: Math.floor(Math.random() * 256),
-                b: Math.floor(Math.random() * 256),
-            };
-            const aframeBoxColor = `rgb(${rgb.r},${rgb.g},${rgb.b})`;
-            aframeBox.setAttribute('color', aframeBoxColor)
-        }, 1);
+    setInterval(() => {
+        const aframeBox = document.getElementById("aframe-box");
+        const rgb = {
+            r: Math.floor(Math.random() * 256), 
+            g: Math.floor(Math.random() * 256),
+            b: Math.floor(Math.random() * 256),
+        };
+        const aframeBoxColor = `rgb(${rgb.r},${rgb.g},${rgb.b})`;
+        aframeBox.setAttribute('color', aframeBoxColor)
     }, 1000);
 }
