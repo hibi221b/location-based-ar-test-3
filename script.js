@@ -24,8 +24,7 @@ function staticLoadPlaces(lat, lng) {
 
 let models = [
     {
-        position: "-1 0.5 -3",
-        rotation: "0 45 0",
+        position: "-1 1.5 -3",
         color: "red",
         scale: "2 2 2"
     }
@@ -34,7 +33,6 @@ let models = [
 let modelIndex = 0;
 let setModel = (model, entity) => {
     entity.setAttribute('position', model.position);
-    entity.setAttribute('rotation', model.rotation);
     entity.setAttribute('color', model.color)
     entity.setAttribute('scale', model.scale)
 }
