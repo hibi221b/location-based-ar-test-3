@@ -26,7 +26,8 @@ let models = [
     {
         position: "-1 0.5 -3",
         rotation: "0 45 0",
-        color: "red"
+        color: "red",
+        scale: "2 2 2"
     }
 ];
 
@@ -35,6 +36,7 @@ let setModel = (model, entity) => {
     entity.setAttribute('position', model.position);
     entity.setAttribute('rotation', model.rotation);
     entity.setAttribute('color', model.color)
+    entity.setAttribute('scale', model.scale)
 }
 
 const renderPlaces = (places) => {
