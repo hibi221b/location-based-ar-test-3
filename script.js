@@ -10,7 +10,7 @@ window.onload = () => {
     renderPlaces(places)
 }
 
-function staticLoadPlaces(lat, lng) {
+const staticLoadPlaces = (lat, lng) => {
     return [
         {
             name: 'aframe box',
@@ -22,16 +22,7 @@ function staticLoadPlaces(lat, lng) {
     ];
 }
 
-let models = [
-    {
-        position: "-2 4 6",
-        color: "red",
-        scale: "4 4 4"
-    }
-];
-
-let modelIndex = 0;
-let setModel = (model, entity) => {
+const setModel = (model, entity) => {
     entity.setAttribute('position', model.position);
     entity.setAttribute('color', model.color)
     entity.setAttribute('scale', model.scale)
@@ -39,6 +30,15 @@ let setModel = (model, entity) => {
 
 const renderPlaces = (places) => {
     let scene = document.querySelector("a-scene");
+
+    let modelIndex = 0;
+    let models = [
+        {
+            position: "-2 4 6",
+            color: "red",
+            scale: "7 7 7"
+        }
+    ];
 
     places.forEach((place) => {
         let latitude = place.location.lat;
