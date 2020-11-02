@@ -67,5 +67,5 @@ const changeAframeBoxColor = () => {
         };
         const aframeBoxColor = `rgb(${rgb.r},${rgb.g},${rgb.b})`;
         aframeBox.setAttribute('color', aframeBoxColor)
-    }, 1000);
+    }, 500);
 }
