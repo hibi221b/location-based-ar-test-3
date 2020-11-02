@@ -34,7 +34,7 @@ const renderPlaces = (places) => {
     let modelIndex = 0;
     let models = [
         {
-            position: "-2 4 10",
+            position: "-2 4 18",
             color: "red",
             scale: "7 7 7"
         }
