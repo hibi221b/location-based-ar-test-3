@@ -6,7 +6,7 @@ window.onload = () => {
         longitude = position.coords.longitude
     })
 
-    let places = staticLoadPlaces(latitude, longitude);
+    const places = staticLoadPlaces(latitude, longitude);
     renderPlaces(places)
 
     changeAframeBoxColor()
@@ -31,10 +31,10 @@ const setModel = (model, entity) => {
 }
 
 const renderPlaces = (places) => {
-    let scene = document.querySelector("a-scene");
+    const scene = document.querySelector("a-scene");
 
     let modelIndex = 0;
-    let models = [
+    const models = [
         {
             position: "-20 4 10",
             color: "red",
@@ -43,10 +43,10 @@ const renderPlaces = (places) => {
     ];
 
     places.forEach((place) => {
-        let latitude = place.location.lat;
-        let longitude = place.location.lng;
+        const latitude = place.location.lat;
+        const longitude = place.location.lng;
 
-        let model = document.createElement("a-box")
+        const model = document.createElement("a-box")
         model.id = "aframe-box"
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
     
