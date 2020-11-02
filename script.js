@@ -26,7 +26,7 @@ let models = [
     {
         position: "-2 4 6",
         color: "red",
-        scale: "2 2 2"
+        scale: "4 4 4"
     }
 ];
 
