@@ -24,7 +24,7 @@ function staticLoadPlaces(lat, lng) {
 
 let models = [
     {
-        position: "2 3 6",
+        position: "-2 8 6",
         color: "red",
         scale: "2 2 2"
     }
