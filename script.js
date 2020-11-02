@@ -8,6 +8,8 @@ window.onload = () => {
 
     let places = staticLoadPlaces(latitude, longitude);
     renderPlaces(places)
+
+    changeAframeBoxColor()
 }
 
 const staticLoadPlaces = (lat, lng) => {
@@ -45,6 +47,7 @@ const renderPlaces = (places) => {
         let longitude = place.location.lng;
 
         let model = document.createElement("a-box")
+        model.id = "aframe-box"
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
     
         setModel(models[modelIndex], model);
@@ -52,4 +55,18 @@ const renderPlaces = (places) => {
 
         scene.appendChild(model);
     });
+}
+
+const changeAframeBoxColor = () => {
+    const aframeBox = document.getElementById("aframe-box");
+
+    setInterval(() => {
+        const rgb = {
+            r: Math.floor(Math.random() * 256),
+            g: Math.floor(Math.random() * 256),
+            b: Math.floor(Math.random() * 256),
+        };
+        const aframeBoxColor = `rgb(${rgb.r},${rgb.g},${rgb.b})`;
+        aframeBox.setAttribute('color', aframeBoxColor)
+    }, 1000);
 }
